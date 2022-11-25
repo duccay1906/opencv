@@ -133,7 +133,7 @@ cv::Mat addpadding_color(cv::Mat& img, cv::Mat& kernel, int BorderType)
     }
     return img_padding;
 }
-cv::Mat convolution_color(cv::Mat& img, cv::Mat& kernel)
+cv::Mat correlation_color(cv::Mat& img, cv::Mat& kernel)
 {
     cv::Mat conv_img(img.rows - (kernel.rows - 1), img.cols - (kernel.cols - 1), img.type());
     for (int x = (kernel.rows - 1) / 2; x < img.rows - (kernel.rows - 1) / 2; x++)

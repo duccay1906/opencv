@@ -104,7 +104,7 @@ cv::Mat addpadding_gray(cv::Mat& img, cv::Mat&  kernel, int BorderType)
     }
     return img_padding;
 }
-cv::Mat convolution_gray(cv::Mat& img, cv::Mat& kernel)
+cv::Mat correlation_gray(cv::Mat& img, cv::Mat& kernel)
 {
     cv::Mat dst(img.rows - (kernel.rows - 1), img.cols - (kernel.cols - 1), img.type());
     for (int x = (kernel.rows - 1) / 2; x < img.rows - (kernel.rows - 1) / 2; x++)

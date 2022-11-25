@@ -56,7 +56,7 @@ int main()
     //filter gray image
     {MEASURE_FUNCTION();
     padding_img_gray = addpadding_gray(src_gray, kernel, 2).clone();
-    custom_img_gray = convolution_gray(padding_img_gray, kernel).clone();
+    custom_img_gray = correlation_gray(padding_img_gray, kernel).clone();
     }
     cv::imshow("custom_gray_image", custom_img_gray);
     cv::imwrite("custom_gray_image.png", custom_img_gray);
@@ -75,7 +75,7 @@ int main()
     //filter color image
     {MEASURE_FUNCTION();
     padding_img_color = addpadding_color(src, kernel, 2).clone();
-    custom_img_color = convolution_color(padding_img_color, kernel).clone();
+    custom_img_color = correlation_color(padding_img_color, kernel).clone();
     }
     cv::imshow("custom_color_image", custom_img_color);
     cv::imwrite("custom_color_image.png", custom_img_color);
